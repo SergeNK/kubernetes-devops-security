@@ -27,6 +27,7 @@ pipeline {
             sh 'printenv'
             sh 'docker build -t snj01/numeric-app:""$GIT_COMMIT"" .'
             sh 'docker push snj01/numeric-app:""$GIT_COMMIT""'
+        }
       }
   }
 }
