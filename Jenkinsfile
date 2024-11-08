@@ -25,6 +25,7 @@ pipeline {
       stage('Docker Build and Push') {
         steps {
             sh 'printenv'
+            sh 'who'
             sh 'docker build -t snj01/numeric-app:""$GIT_COMMIT"" .'
             sh 'docker push snj01/numeric-app:""$GIT_COMMIT""'
         }
